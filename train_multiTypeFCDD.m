@@ -3,7 +3,6 @@ clc; clear all; close all;
 
 % Execution Flags & Hyperparameters
 trainFlag = 1;
-upsampleMethodFlag = false; % Set true if using receptive_upsample
 
 % Paths & Dataset Settings
 dataDir = fullfile(pwd, "WRc_Dataset");
