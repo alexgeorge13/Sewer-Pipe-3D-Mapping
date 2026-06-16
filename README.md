@@ -11,7 +11,7 @@ The pipeline utilizes multi-class neural segmentation and dense optical feature 
 3. **Recursive EKF Correction:** Refines distance and angular orientation parameters.
 4. **Post-Processing Heuristics:** Deduplicates spatial tracking clusters and prunes false-positives utilizing physical plumbing priors (e.g., removing "sedimentary deposits" detected on pipe ceilings).
 
-## 🛠️ Repository File Mapping
+## Repository File Mapping
 
 * `main_EKF_mapping.m` — Main execution loop and dashboard pipeline.
 * `setup_config.m` — Defines global spatial covariance, noise matrices, and cylinder geometric bounds.
@@ -21,7 +21,7 @@ The pipeline utilizes multi-class neural segmentation and dense optical feature 
 * `get_focus_of_expansion.m` / `resizeImage.m` — Feature extraction and video spatial helpers.
 * `train_multiTypeFCDD.m` / `customAnomalyScore.m` — Neural network training frameworks.
 
-## 📋 Prerequisites & Dataset Setup
+## Prerequisites & Dataset Setup
 
 Follow the steps below to gather the required datasets and prepare them for the pipeline:
 
