@@ -12,7 +12,7 @@ startFrame = 2500;
 endFrame = 4300; % Start and end frames of the 28-meter segment
 
 % Load Real Video and Odometry
-vReader = VideoReader('sewerPipeVideo.mp4');
+vReader = VideoReader('Pipe1.mp4');
 gTruth = readtable('sewerPipe_groundTruthAnomaly.csv');
 pipeOdom = gTruth.Distance * 1000; % Raw odometry in mm
 
