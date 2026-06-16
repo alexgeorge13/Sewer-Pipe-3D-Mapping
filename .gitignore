@@ -1,0 +1,13 @@
+# --- Ignore Large Binaries & Assets ---
+*.mp4
+*.mat
+*.png
+
+# --- Ignore Dataset Directory ---
+WRc_Dataset/
+
+# --- Ignore MATLAB Internal / Runtime Files ---
+.matlab/
+*.asv
+*.slxc
+*.mex*
