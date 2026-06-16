@@ -2,6 +2,24 @@
 
 An Extended Kalman Filter (EKF) mapping pipeline designed for tether-anchored robotic inspection in cylindrical environments (sewer pipes). This repository features a 3D reconstruction dashboard tracking semantic features over time alongside a simulated Clearpath Husky rover model.
 
+If you make use of this code, the pipeline structure, or the baseline findings in your academic work, please cite the original conference paper:
+
+#### BibTeX
+```bibtex
+@inproceedings{george2026lightweight,
+  title={Lightweight semantic 3D mapping in sewer pipes leveraging cylindrical geometry},
+  author={George, A and Mihaylova, L and Anderson, SR},
+  booktitle={Proceedings of the 12th 2026 International Conference on Control, Decision and Information Technologies (CoDIT 2026)},
+  year={2026},
+  organization={Institute of Electrical and Electronics Engineers (IEEE)}
+}
+```
+
+#### Standard Text
+> George, A., Mihaylova, L., & Anderson, S. R. (2026, April). Lightweight semantic 3D mapping in sewer pipes leveraging cylindrical geometry. In Proceedings of the 12th 2026 International Conference on Control, Decision and Information Technologies (CoDIT 2026). Institute of Electrical and Electronics Engineers (IEEE).
+
+---
+
 ## System Architecture & Workflow
 
 The pipeline utilizes multi-class neural segmentation and dense optical feature tracking to identify pipeline defects, projects them recursively using a monocular camera model, and refines their structural locations over time using a specialized EKF layout.
@@ -9,7 +27,6 @@ The pipeline utilizes multi-class neural segmentation and dense optical feature 
 1. **Inference & Focus of Expansion (FoE):** Extracts semantic blobs and visual centering tracking parameters.
 2. **Data Association:** Employs a Global Nearest Neighbor (GNN) paradigm to match active detections to established anomaly tracks.
 3. **Recursive EKF Correction:** Refines distance and angular orientation parameters.
-4. **Post-Processing Heuristics:** Deduplicates spatial tracking clusters and prunes false-positives utilizing physical plumbing priors (e.g., removing "sedimentary deposits" detected on pipe ceilings).
 
 ## Repository File Mapping
 
