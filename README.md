@@ -37,17 +37,6 @@ Where $l_{x,i}$ is the absolute axial distance along the pipe baseline, and $\th
 
 ---
 
-## Repository Component Mapping
-
-* `main_EKF_mapping.m` — **Core Script Orchestrator.** Loads visual streams, increments timelines, updates local tracking states, and renders the 3D cylindrical graphic canvas.
-* `setup_config.m` — Instantiates geometric constraints (300mm radius boundaries), sensor covariances ($Q$, $R$), and GNN Mahalanobis validation thresholds.
-* `perform_gnn_association.m` — Evaluates candidate detections using a Mahalanobis distance cost matrix, executing assignments via the Duff-Koster linear optimization paradigm.
-* `initialize_new_tracks.m` — Inverts the perspective monocular model to project unassociated 2D image coordinates back into the 3D cylindrical frame.
-* `update_existing_tracks.m` — Linearizes the projection model via a specialized Jacobian matrix ($H$) to perform recursive EKF state and covariance updates.
-* `merge_redundant_tracks.m` — Handles spatial cluster deduplication and enforces pruning heuristics to clear false-positive detections.
-* `get_focus_of_expansion.m` / `resizeImage.m` — Structural processing blocks for RANSAC-driven FOE calculation and input downsampling.
-* `train_multiTypeFCDD.m` / `customAnomalyScore.m` — Front-end training logic, performance metric computation, and score normalization.
-
 ## Prerequisites & Dataset Setup
 
 Follow the steps below to gather the required datasets and prepare them for the pipeline:
